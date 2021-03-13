@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MovieListItem from "./MovieListItem";
 
 
 class MovieList extends Component {
@@ -10,6 +9,7 @@ class MovieList extends Component {
                 {Object.keys(movies).map(id => (
                     <li key={id}>
                         <h2>{movies[id].name}</h2>
+                        <p>Liked By:</p>
                         <ul>
                             {moviesByUser[id]
                                 ? moviesByUser[id].map(userID => (<li>{users[userID].name}</li>))
